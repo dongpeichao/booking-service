@@ -36,12 +36,18 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
 }
 
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
+}
+
+contracts {
+    testFramework = org.springframework.cloud.contract.verifier.config.TestFramework.JUNIT5
+    failOnNoContracts = false
 }
 
 test {

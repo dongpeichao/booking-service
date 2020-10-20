@@ -1,0 +1,9 @@
+stubrunner:
+  repositoryRoot: 'stubs://file:///Users/peichao.dong/Documents/projects/dpc/heima/booking-service/src/test/resources/contracts'
+  ids:
+    - 'com.thoughtworks:booking-service-stubs:8088'
+  stubs-mode: remote
+  generate-stubs: true
+
+plane:
+  url: http://localhost:8088/plane

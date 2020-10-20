@@ -1,5 +1,9 @@
-CREATE TABLE customer (
+CREATE TABLE bookingOrder (
     id SERIAL PRIMARY KEY,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255)
+    type VARCHAR(255),
+    status VARCHAR(255),
+    content VARCHAR(255),
+    price INT,
+    createdAt TIMESTAMP,
+    updatedAt TIMESTAMP
 );
